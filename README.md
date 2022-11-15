@@ -1,2 +1,2 @@
 # TigoDeken.github.io
-Tigo's website
+Welcome to my website good people of the internet;)
