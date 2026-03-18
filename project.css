@@ -1,0 +1,215 @@
+/* PROJECT PAGE STYLES */
+
+/* Hero */
+.project-hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  padding: 8rem 5rem 6rem;
+  position: relative;
+}
+
+.project-hero-inner { max-width: 520px; }
+
+.project-meta-top {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.project-hero h1 {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+  color: #fff;
+}
+
+.project-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.65;
+  margin-bottom: 2.5rem;
+  max-width: 440px;
+}
+
+.project-stats {
+  display: flex;
+  gap: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.stat { display: flex; flex-direction: column; }
+
+.stat-num {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.3rem;
+}
+
+.project-hero-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-hero-img img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 12px;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6));
+}
+
+/* Body */
+.project-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem 6rem;
+}
+
+.project-section {
+  margin-bottom: 5rem;
+}
+
+.label {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.project-section h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+}
+
+.project-section p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  max-width: 680px;
+}
+
+/* Full-width image */
+.img-full img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  display: block;
+  background: var(--surface);
+}
+
+.img-full p.caption { max-width: 100%; margin-top: 0.75rem; }
+
+/* 2-col image grid */
+.img-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 5rem;
+}
+
+.img-grid-item img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  display: block;
+  background: var(--surface);
+}
+
+/* Caption */
+.caption {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.6rem;
+  font-style: italic;
+}
+
+/* Highlight quote box */
+.highlight-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.quote {
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 0.75rem !important;
+  max-width: 100% !important;
+}
+
+.quote-sub {
+  font-size: 0.8rem;
+  color: #444 !important;
+  font-style: normal;
+  margin: 0 !important;
+}
+
+/* Nav */
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border);
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .project-hero {
+    grid-template-columns: 1fr;
+    padding: 7rem 1.5rem 4rem;
+    gap: 2.5rem;
+  }
+  .project-hero-img { order: -1; }
+  .project-hero-img img { max-height: 40vh; }
+  .project-body { padding: 3rem 1.25rem 4rem; }
+  .img-grid-2 { grid-template-columns: 1fr; }
+  .project-stats { gap: 1.5rem; }
+  .project-nav { flex-direction: column; gap: 1rem; }
+}
