@@ -4,12 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tigo Deken — Engineering Product Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav>
-    <span class="logo">TD</span>
+    <a href="#" class="logo">TD</a>
     <div class="nav-links">
       <a href="#work">Work</a>
       <a href="#about">About</a>
@@ -19,90 +22,131 @@
 
   <section class="hero">
     <div class="hero-content">
-      <p class="eyebrow">Engineering Product Designer</p>
-      <h1>I design products that work<br>as well as they look.</h1>
-      <p class="sub">Bridging engineering constraints and user needs to build things that are functional, considered, and built to last.</p>
-      <a href="#work" class="btn">View My Work</a>
+      <span class="label animate-1">Engineering Product Designer</span>
+      <h1 class="animate-2">I design products<br><em>that work as well</em><br>as they look.</h1>
+      <p class="hero-sub animate-3">Bridging engineering constraints and user needs to build things that are functional, considered, and built to last.</p>
+    </div>
+    <div class="hero-scroll animate-4">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <section id="work" class="section">
-    <h2>Selected Work</h2>
-    <div class="grid">
+  <section id="work" class="projects">
+    <div class="projects-header">
+      <span class="label">Selected Work</span>
+      <div class="project-controls">
+        <span class="project-counter">
+          <span id="current-num">01</span> / <span id="total-num">03</span>
+        </span>
+        <div class="project-arrows">
+          <button class="arrow-btn prev" aria-label="Previous project">&#8592;</button>
+          <button class="arrow-btn next" aria-label="Next project">&#8594;</button>
+        </div>
+      </div>
+    </div>
 
-      <a href="flipcap.html" class="card card-link">
-        <div class="card-img" style="background: linear-gradient(135deg, #1a2018, #2d3828); display:flex; align-items:center; justify-content:center; overflow:hidden;">
-          <img src="images/flipcap-hero.png" alt="Recharge Flip Cap" style="height:200px; width:100%; object-fit:cover; object-position:center;" />
-        </div>
-        <div class="card-body">
-          <span class="tag">Packaging Design</span>
-          <h3>Recharge Flip Cap</h3>
-          <p>A refillable shampoo packaging for Marie Stella Maris — 80% less plastic, 100% mono-material, zero compromise on feel.</p>
-        </div>
-      </a>
+    <div class="project-stage">
 
-      <a href="philips.html" class="card card-link">
-        <div class="card-img" style="background: linear-gradient(135deg, #1a1410, #2e2018); display:flex; align-items:center; justify-content:center; overflow:hidden;">
-          <img src="images/philips-exploded.png" alt="Philips Café Comfort" style="height:200px; width:100%; object-fit:cover; object-position:center;" />
+      <article class="project-slide active" data-index="0">
+        <div class="project-image">
+          <img src="images/flipcap-hero.png" alt="Recharge Flip Cap" />
         </div>
-        <div class="card-body">
-          <span class="tag">Product Analysis</span>
-          <h3>Philips Café Comfort</h3>
-          <p>A teardown of a 1999 filter coffee machine — 21 parts, a 25-year design timeline, and a force analysis nobody asked for.</p>
+        <div class="project-info">
+          <span class="project-num label">01</span>
+          <span class="project-cat label">Packaging Design</span>
+          <h2>Recharge<br>Flip Cap</h2>
+          <p>Refillable shampoo packaging for Marie Stella Maris — 80% less plastic, 100% mono-material, zero compromise on feel.</p>
+          <a href="flipcap.html" class="project-cta">View Project &#8594;</a>
         </div>
-      </a>
+      </article>
 
-      <a href="balanceboard.html" class="card card-link">
-        <div class="card-img" style="background: #1a1508; overflow:hidden;">
-          <img src="images/balanceboard-render.png" alt="Balance Board" style="height:200px; width:100%; object-fit:cover; object-position:center;" />
+      <article class="project-slide" data-index="1">
+        <div class="project-image">
+          <img src="images/philips-exploded.png" alt="Philips Café Comfort" />
         </div>
-        <div class="card-body">
-          <span class="tag">Product Design</span>
-          <h3>Balance Board</h3>
+        <div class="project-info">
+          <span class="project-num label">02</span>
+          <span class="project-cat label">Product Analysis</span>
+          <h2>Philips<br>Café Comfort</h2>
+          <p>Teardown of a 1999 filter coffee machine — 21 parts, a 25-year design timeline, and a force analysis nobody asked for.</p>
+          <a href="philips.html" class="project-cta">View Project &#8594;</a>
+        </div>
+      </article>
+
+      <article class="project-slide" data-index="2">
+        <div class="project-image">
+          <img src="images/balanceboard-render.png" alt="Balance Board" />
+        </div>
+        <div class="project-info">
+          <span class="project-num label">03</span>
+          <span class="project-cat label">Product Design</span>
+          <h2>Balance<br>Board</h2>
           <p>Three wooden balance boards with hand-engraved leaf motifs — designed, modelled, and rendered from scratch in Blender.</p>
+          <a href="balanceboard.html" class="project-cta">View Project &#8594;</a>
         </div>
-      </a>
+      </article>
 
     </div>
   </section>
 
-  <section id="about" class="section section-alt">
-    <div class="about-grid">
-      <div>
-        <h2>About Me</h2>
-        <p>I'm Tigo Deken, 22, studying Engineering Product Design in Amsterdam. I got into this field because I've always been the person who picks things up, turns them over, and wonders how they were made — and whether they could be better.</p>
-        <p>My work sits at the edge of engineering and design. I like the constraints. A brief that says "sustainable, premium, and manufacturable" is more interesting to me than one with no rules at all.</p>
-        <p>Outside of school I do garden work, race cars in simulators, and occasionally convince myself I should learn Blender properly.</p>
-      </div>
-      <div class="skills">
-        <h3>What I Do</h3>
-        <ul>
-          <li>Product Design</li>
-          <li>Industrial / Mechanical Design</li>
-          <li>Prototyping & Fabrication</li>
-          <li>Design for Manufacturing</li>
-          <li>User Research</li>
-          <li>CAD / 3D Modeling</li>
-        </ul>
+  <section id="about" class="about">
+    <div class="about-inner">
+      <span class="label">About</span>
+      <div class="about-body">
+        <h2>Tigo Deken,<br><em>22, Amsterdam.</em></h2>
+        <div class="about-text">
+          <p>I study Engineering Product Design in Amsterdam. My work lives at the intersection of mechanical thinking and design sensibility — things should be well-made and make sense to use.</p>
+          <p>I got into this field because I've always been the person who picks things up, turns them over, and wonders how they were made — and whether they could be better. I like constraints. A brief that says "sustainable, premium, and manufacturable" is more interesting to me than one with no rules at all.</p>
+          <p>Outside of school I do garden work, race cars in simulators, and occasionally convince myself I should learn Blender properly.</p>
+          <div class="skills">
+            <span class="label">Disciplines</span>
+            <ul>
+              <li>Product Design</li>
+              <li>Industrial &amp; Mechanical Design</li>
+              <li>Prototyping &amp; Fabrication</li>
+              <li>Design for Manufacturing</li>
+              <li>User Research</li>
+              <li>CAD / 3D Modeling</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section">
-    <div class="contact-wrap">
-      <h2>Get in Touch</h2>
-      <p>Available for freelance, contract, and full-time opportunities.</p>
-      <a href="mailto:tigodeken@gmail.com" class="btn">tigodeken@gmail.com</a>
+  <section id="contact" class="contact">
+    <div class="contact-inner">
+      <span class="label">Get in Touch</span>
+      <h2>Let's work<br><em>together.</em></h2>
+      <a href="mailto:tigodeken@gmail.com" class="email-link">tigodeken@gmail.com</a>
+      <p class="availability">Available for freelance, contract, and full-time opportunities.</p>
       <div class="social-links">
-        <a href="https://linkedin.com/in/tigodeken" target="_blank">LinkedIn</a>
-        <a href="https://github.com/TigoDeken" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/tigodeken" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/TigoDeken" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Tigo Deken</p>
+    <span class="label">&#169; 2026 Tigo Deken</span>
   </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.project-slide');
+    const currentNum = document.getElementById('current-num');
+    let active = 0;
+
+    function goTo(index) {
+      slides[active].classList.remove('active');
+      active = (index + slides.length) % slides.length;
+      slides[active].classList.add('active');
+      currentNum.textContent = String(active + 1).padStart(2, '0');
+    }
+
+    document.querySelector('.arrow-btn.next').addEventListener('click', () => goTo(active + 1));
+    document.querySelector('.arrow-btn.prev').addEventListener('click', () => goTo(active - 1));
+  </script>
 
 </body>
 </html>
